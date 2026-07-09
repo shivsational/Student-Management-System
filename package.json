@@ -1,0 +1,33 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "A Student Management System built using Node.js, Express.js, EJS, MySQL and Bootstrap.",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "ejs",
+    "student-management",
+    "crud",
+    "mvc"
+  ],
+  "author": "Shiv Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.22.2",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.22.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

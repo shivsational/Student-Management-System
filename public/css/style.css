@@ -1,0 +1,414 @@
+/* ======================================================
+   STUDENT MANAGEMENT SYSTEM
+   Professional UI
+   Developed by Shiv Yadav
+====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================================
+                    ROOT COLORS
+====================================================== */
+
+:root{
+
+    --primary:#0d6efd;
+    --primary-dark:#0b5ed7;
+    --secondary:#6c757d;
+    --success:#198754;
+    --danger:#dc3545;
+    --warning:#ffc107;
+    --light:#eef3fb;
+    --white:#ffffff;
+    --text:#222;
+    --border:#dce3ef;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+    height:100%;
+
+}
+
+body{
+
+    background:var(--light);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ======================================================
+                    PAGE LAYOUT
+====================================================== */
+
+main{
+
+    flex:1;
+
+}
+
+/* ======================================================
+                    SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--light);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ======================================================
+                        LINKS
+====================================================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+
+/* ======================================================
+                        NAVBAR
+====================================================== */
+
+.navbar{
+
+    background:var(--primary) !important;
+    padding:14px 0;
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
+
+}
+
+.navbar-brand{
+
+    font-size:28px;
+    font-weight:700;
+
+}
+
+.navbar-brand small{
+
+    display:block;
+    font-size:13px;
+    color:#dbeafe !important;
+
+}
+
+.navbar .nav-link{
+
+    color:white !important;
+    font-weight:500;
+    border-radius:10px;
+    padding:10px 18px;
+    transition:.3s;
+
+}
+
+.navbar .nav-link:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.navbar .btn-danger{
+
+    border-radius:10px;
+
+}
+
+/* ======================================================
+                    ACTIVE NAVBAR
+====================================================== */
+
+.navbar .nav-link.active{
+
+    background:white;
+    color:var(--primary) !important;
+    font-weight:600;
+
+}
+
+.navbar .nav-link.active:hover{
+
+    background:white;
+    color:var(--primary) !important;
+
+}
+
+/* ======================================================
+                    DASHBOARD
+====================================================== */
+
+.dashboard-card,
+.card{
+
+    border:none;
+    border-radius:18px;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.dashboard-card:hover,
+.card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.dashboard-icon{
+
+    font-size:55px;
+    margin-bottom:15px;
+
+}
+
+.card-header{
+
+    border-radius:18px 18px 0 0 !important;
+    font-size:22px;
+    font-weight:700;
+
+}
+
+/* ======================================================
+                        TABLE
+====================================================== */
+
+.table{
+
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+
+}
+
+.table thead{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+.table th,
+.table td{
+
+    text-align:center;
+    vertical-align:middle;
+
+}
+
+.table tbody tr{
+
+    transition:.25s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#eef5ff;
+
+}
+
+/* ======================================================
+                        BUTTONS
+====================================================== */
+
+.btn{
+
+    border-radius:10px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/* ======================================================
+                        FORMS
+====================================================== */
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+    border:1px solid var(--border);
+    padding:12px 15px;
+    transition:.3s;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:var(--primary);
+    box-shadow:0 0 12px rgba(13,110,253,.25);
+
+}
+
+label{
+
+    font-weight:600;
+    margin-bottom:8px;
+
+}
+
+/* ======================================================
+                    SEARCH BOX
+====================================================== */
+
+#search{
+
+    border-radius:30px;
+
+}
+
+/* ======================================================
+                    ALERTS
+====================================================== */
+
+.alert{
+
+    border:none;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+/* ======================================================
+                    BADGES
+====================================================== */
+
+.badge{
+
+    padding:8px 12px;
+    border-radius:8px;
+
+}
+
+/* ======================================================
+                    LOGIN PAGE
+====================================================== */
+
+.login-container{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef3fb,#dce8ff);
+
+}
+
+.login-card{
+
+    width:420px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* ======================================================
+                    FOOTER
+====================================================== */
+
+footer{
+
+    margin-top:auto;
+    background:white;
+    border-top:1px solid #e4e7ec;
+    padding:25px;
+    text-align:center;
+    font-size:15px;
+
+}
+
+/* ======================================================
+                    RESPONSIVE
+====================================================== */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+
+        font-size:20px;
+
+    }
+
+    .dashboard-icon{
+
+        font-size:40px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+    .btn{
+
+        width:100%;
+        margin-top:8px;
+
+    }
+
+    .card-header{
+
+        font-size:20px;
+
+    }
+
+    .login-card{
+
+        width:95%;
+
+    }
+
+}
