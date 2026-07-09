@@ -1,65 +1,85 @@
-# Student Management System
+# 🎓 Student Management System
 
-A simple and responsive Student Management System developed using **Node.js**, **Express.js**, **EJS**, **MySQL**, **Bootstrap 5**, **HTML**, **CSS**, and **JavaScript**.
+![Node.js](https://img.shields.io/badge/Node.js-22.x-green)
+![Express.js](https://img.shields.io/badge/Express.js-4.x-black)
+![MySQL](https://img.shields.io/badge/MySQL-8.x-blue)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
+![License](https://img.shields.io/badge/License-ISC-orange)
 
-The project allows an administrator to securely manage student records with authentication and complete CRUD functionality.
+A full-stack **Student Management System** developed using **Node.js**, **Express.js**, **EJS**, **MySQL**, and **Bootstrap 5** following the **MVC Architecture**.
 
----
-
-## Features
-
-- Secure Admin Login (bcrypt password hashing)
-- Session-Based Authentication
-- Dashboard
-- Add Student
-- View Students
-- Edit Student
-- Delete Student
-- Search Students
-- Sort Students (ID, Name, Roll Number, Course)
-- Flash Messages
-- Input Validation
-- Duplicate Record Detection
-- Responsive User Interface
-- MySQL Database Integration
-- Custom 404 & 500 Error Pages
+The application provides a secure admin portal for managing student records with authentication and complete CRUD functionality.
 
 ---
 
-## Technologies Used
+# 🚀 Features
 
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- EJS
-
-### Backend
-
-- Node.js
-- Express.js
-
-### Database
-
-- MySQL
-
-### Packages
-
-- express
-- ejs
-- mysql2
-- express-session
-- bcrypt
-- dotenv
-- nodemon
+- 🔐 Secure Admin Login (bcrypt)
+- 🔑 Session-Based Authentication
+- 📊 Dashboard
+- ➕ Add Student
+- 📄 View Students
+- ✏️ Edit Student
+- ❌ Delete Student
+- 🔍 Search Students
+- 🔃 Sort Students
+- ⚠️ Flash Messages
+- ✅ Input Validation
+- 🚫 Duplicate Record Detection
+- 📱 Responsive UI
+- 🗄️ MySQL Database Integration
+- 🚧 Custom 404 & 500 Error Pages
 
 ---
 
-## Project Structure
+# 🖼️ Screenshots
 
-```
+## Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Student List
+
+![Students](screenshots/students.png)
+
+---
+
+## Add Student
+
+![Add Student](screenshots/add-student.png)
+
+---
+
+## Edit Student
+
+![Edit Student](screenshots/edit-student.png)
+
+---
+
+# 🏗️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | HTML5, CSS3, JavaScript, Bootstrap 5, EJS |
+| Backend | Node.js, Express.js |
+| Database | MySQL |
+| Authentication | Express Session, bcrypt |
+| Environment | dotenv |
+| Version Control | Git & GitHub |
+
+---
+
+# 📂 Project Structure
+
+```text
 Student-Management-System/
 
 ├── config/
@@ -77,29 +97,20 @@ Student-Management-System/
 │
 ├── public/
 │   ├── css/
-│   │   └── style.css
 │   └── js/
-│       └── script.js
 │
 ├── routes/
 │   └── studentRoutes.js
 │
-├── views/
-│   ├── partials/
-│   │   ├── alerts.ejs
-│   │   ├── footer.ejs
-│   │   └── navbar.ejs
-│   │
-│   ├── 404.ejs
-│   ├── 500.ejs
-│   ├── addStudent.ejs
-│   ├── dashboard.ejs
-│   ├── editStudent.ejs
-│   ├── index.ejs
-│   └── students.ejs
+├── screenshots/
+│   ├── login.png
+│   ├── dashboard.png
+│   ├── students.png
+│   ├── add-student.png
+│   └── edit-student.png
 │
-├── .env
-├── .gitignore
+├── views/
+│
 ├── app.js
 ├── database.sql
 ├── package.json
@@ -108,19 +119,40 @@ Student-Management-System/
 
 ---
 
-## Installation
+# 🗄️ Database Schema
 
-### 1. Clone the repository
+## students
 
-```bash
-git clone <repository-url>
-```
+| Column | Type |
+|---------|------|
+| id | INT |
+| name | VARCHAR(100) |
+| rollNo | VARCHAR(20) |
+| course | VARCHAR(100) |
+| email | VARCHAR(100) |
+| phone | VARCHAR(15) |
 
-or download the ZIP file.
+## admins
+
+| Column | Type |
+|---------|------|
+| id | INT |
+| username | VARCHAR(50) |
+| password | VARCHAR(255) |
 
 ---
 
-### 2. Install dependencies
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/shivsational/Student-Management-System.git
+```
+
+---
+
+## Install Dependencies
 
 ```bash
 npm install
@@ -128,51 +160,51 @@ npm install
 
 ---
 
-### 3. Create the MySQL database
+## Configure Environment Variables
 
-Run the following SQL file:
+Create a `.env` file.
 
-```
-database.sql
-```
+### Local MySQL
 
-This creates all required tables and inserts the default administrator.
-
----
-
-### 4. Create a `.env` file
-
-```
+```env
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_mysql_password
+DB_PASSWORD=your_password
 DB_NAME=student_management
 
-SESSION_SECRET=student_management_secret
+SESSION_SECRET=your_secret
 PORT=3000
 ```
 
-Replace `your_mysql_password` with your own MySQL password.
+---
+
+## Import Database
+
+Run:
+
+```text
+database.sql
+```
 
 ---
 
-### 5. Start the project
+## Start Application
 
-Production:
-
-```bash
-npm start
-```
-
-Development:
+Development
 
 ```bash
 npm run dev
 ```
 
+Production
+
+```bash
+npm start
+```
+
 ---
 
-### 6. Open the application
+Open:
 
 ```
 http://localhost:3000
@@ -180,7 +212,7 @@ http://localhost:3000
 
 ---
 
-## Default Admin Login
+# 🔑 Default Admin Credentials
 
 Username
 
@@ -196,27 +228,34 @@ admin123
 
 ---
 
-## Future Enhancements
+# 📌 Future Enhancements
 
 - Student Photo Upload
 - Attendance Management
 - Marks Management
-- Export to Excel
-- Export to PDF
+- PDF Export
+- Excel Export
 - Email Notifications
 - Multiple Admin Accounts
-- Student Login Portal
+- Student Portal
 - Pagination
-- Advanced Search
+- REST API
+- Dashboard Analytics
 
 ---
 
-## Author
+# 👨‍💻 Author
 
 **Shiv Yadav**
 
-B.Tech CSE
+B.Tech Computer Science & Engineering
 
 GLA University, Mathura
 
-2026
+GitHub: https://github.com/shivsational
+
+---
+
+# 📜 License
+
+This project is licensed under the ISC License.
